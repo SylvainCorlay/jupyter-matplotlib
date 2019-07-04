@@ -141,6 +141,7 @@ var MPLCanvasView = widgets.DOMWidgetView.extend({
         this.figure.appendChild(canvas_div);
 
         var canvas = this.canvas = document.createElement('canvas');
+        canvas.style.display = 'block';
         canvas.style.left = 0;
         canvas.style.top = 0;
         canvas.style.zIndex = 0;
@@ -157,6 +158,7 @@ var MPLCanvasView = widgets.DOMWidgetView.extend({
         this.ratio = (window.devicePixelRatio || 1) / backingStore;
 
         var rubberband_canvas = this.rubberband_canvas = document.createElement('canvas');
+        rubberband_canvas.style.display = 'block';
         rubberband_canvas.style.position = 'absolute';
         rubberband_canvas.style.left = 0;
         rubberband_canvas.style.top = 0;
